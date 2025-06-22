@@ -1,7 +1,7 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template # type: ignore
 
 main = Blueprint('main', __name__)
 
 @main.route('/')
-def home():
-    return "<h1>Bienvenido a Quadra 🍽️</h1><p>Aquí irá tu landing page.</p>"
+def index():
+    return render_template('index.html')
